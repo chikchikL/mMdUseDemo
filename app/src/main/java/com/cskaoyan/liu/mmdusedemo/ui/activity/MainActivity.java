@@ -1,4 +1,4 @@
-package com.cskaoyan.liu.mmdusedemo.ui;
+package com.cskaoyan.liu.mmdusedemo.ui.activity;
 
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;

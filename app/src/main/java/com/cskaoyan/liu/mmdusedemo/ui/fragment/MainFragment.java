@@ -1,8 +1,11 @@
 package com.cskaoyan.liu.mmdusedemo.ui.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +17,8 @@ import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
 import com.cskaoyan.liu.mmdusedemo.R;
 import com.cskaoyan.liu.mmdusedemo.adapter.RecyclerAdapter;
 import com.cskaoyan.liu.mmdusedemo.entity.RecyclerBean;
+import com.cskaoyan.liu.mmdusedemo.listener.RecyclerItemClickListener;
+import com.cskaoyan.liu.mmdusedemo.ui.activity.RecyclerDetailActivity;
 
 import java.util.ArrayList;
 
@@ -53,6 +58,22 @@ public class MainFragment extends Fragment {
         RecyclerAdapter recyclerAdapter = new RecyclerAdapter(getActivity(), mList);
 
         //给item设置点击响应监听器
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getActivity(), new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                //当item响应点击事件时，需要将跳转的activity需要的数据带过去
+                RecyclerBean main = mList.get(position);
+                Intent intent = new Intent(getActivity(), RecyclerDetailActivity.class);
+                intent.putExtra("main", main);
+
+                //这里是实现Activity的切入动画
+                ActivityOptionsCompat options =
+                        ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
+                                view.findViewById(R.id.ivMain),getActivity().getString(R.string.transition_book_img));
+
+                ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
+            }
+        }));
 
         //给recyclerView设置adapter
         recyclerView.setAdapter(recyclerAdapter);

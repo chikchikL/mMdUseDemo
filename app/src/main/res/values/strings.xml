@@ -2,4 +2,6 @@
     <string name="app_name">mMdUseDemo</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <!--给共享动画的两个页面中的元素指定名字，这里是item中的iv以及Detail页面toolbar中的iv-->
+    <string name="transition_book_img">transition_book_img</string>
 </resources>

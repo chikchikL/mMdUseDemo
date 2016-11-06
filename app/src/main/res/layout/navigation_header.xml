@@ -12,11 +12,11 @@
 
     <com.cskaoyan.liu.mmdusedemo.widget.CircleImageView
         android:id="@+id/profile_image"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
         android:layout_marginTop="20dp"
-        android:src="@mipmap/ic_recyclerview_04"
-        app:border_color="#ffff00"
+        android:src="@mipmap/ic_recyclerview_01"
+        app:border_color="#F8BCAE"
         app:border_width="5dp"
         />
 

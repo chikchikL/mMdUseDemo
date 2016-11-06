@@ -15,7 +15,7 @@
         <item
             android:id="@+id/navigation_item_snackbar"
             android:icon="@mipmap/ic_flare_black_24dp"
-            android:title="Snackbar" />
+            android:title="SnackBar" />
 
     </group>
 </menu>

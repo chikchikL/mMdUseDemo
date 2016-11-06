@@ -2,10 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v4.view.ViewPager
+    <!--这是一个为recyclerView添加头布局的开源控件-->
+    <!--<com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader
+        android:id="@+id/header"
+        android:background="@color/colorAccent"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/vp_mainFragment">
+        android:layout_height="180dp">
 
-    </android.support.v4.view.ViewPager>
+    </com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="20dp"
+        >
+    </LinearLayout>
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
 </LinearLayout>

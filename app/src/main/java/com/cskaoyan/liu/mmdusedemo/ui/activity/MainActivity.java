@@ -14,6 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.cskaoyan.liu.mmdusedemo.R;
+import com.cskaoyan.liu.mmdusedemo.ui.fragment.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar_title = (TextView) findViewById(R.id.toolbar_title);
         this.setSupportActionBar(toolbar);
         toolbar.setTitle("试试看显示吗");
-        getSupportActionBar().setDisplayShowTitleEnabled(false);//这句好像是使toolbar不要显示默认的title
+        getSupportActionBar().setDisplayShowTitleEnabled(false);//这句是使toolbar不要显示默认的title
 
 
 
@@ -76,10 +77,12 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+       mNavigationView.setCheckedItem(R.id.navigation_item_main);
     }
 
     private void switchToMain() {
-        //getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new MainFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new MainFragment()).commit();
         toolbar_title.setText("主页");
     }
 
@@ -90,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void switchToBlog() {
         //getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new Snackbar()).commit();
-        toolbar_title.setText("Snackbar");
+        toolbar_title.setText("SnackBar");
     }
 
 

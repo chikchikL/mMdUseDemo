@@ -87,12 +87,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void switchToExample() {
-        //getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new TextInputLayout()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new com.cskaoyan.liu.mmdusedemo.ui.fragment.TextInputLayout()).commit();
         toolbar_title.setText("MD输入框");
     }
 
     private void switchToBlog() {
-        //getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new Snackbar()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content, new com.cskaoyan.liu.mmdusedemo.ui.fragment.Snackbar()).commit();
         toolbar_title.setText("SnackBar");
     }
 

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="170dp"
     android:clickable="true"
+    android:id="@+id/card_item"
     android:layout_margin="10dp"
     app:cardCornerRadius="4dp"
     app:cardElevation="10dp"
